@@ -30,7 +30,7 @@ function App() {
 	return (
 		<div className="body">
 			<div className="popup-card">
-				<div className="checkbox-container">
+				<label className="checkbox-container">
 					{/* NOTE: Since improvisation is not allowed, I didn't create a state when only some pages are selected. Instead, I set to unchecked */}
 					<span className="checkbox-label">All pages</span>
 					<input
@@ -39,13 +39,13 @@ function App() {
 						checked={allPages}
 						onChange={handleAllPagesChange}
 					/>
-				</div>
+				</label>
 				<div className="divider" />
-        {/* NOTE: Since the figma is set to manual sorting, the space between last checkbox and divider is manual (overlapped) */}
+				{/* NOTE: Since the figma is set to manual sorting, the space between last checkbox and divider is manual (overlapped) */}
 				{/* NOTE: But here, I set to automatic spacing, so the total height is different than the figma */}
-        {/* NOTE: Actually, it can be done by adding margin top with minus value, I separate it to custom class, mt- */}
-        {pagesList.map((page, index) => (
-					<div key={index} className="checkbox-container">
+				{/* NOTE: Actually, it can be done by adding margin top with minus value, I separate it to custom class, mt- */}
+				{pagesList.map((page, index) => (
+					<label key={index} className="checkbox-container">
 						<span className="checkbox-label">{page}</span>
 						<input
 							type="checkbox"
@@ -53,7 +53,7 @@ function App() {
 							checked={selectedPages.includes(index)}
 							onChange={handlePageChange(index)}
 						/>
-					</div>
+					</label>
 				))}
 				<div className="divider" />
 				<div className="btn-container">
