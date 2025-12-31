@@ -29,9 +29,12 @@ function App() {
 
 	return (
 		<div className="body">
+			{/* !!NOTE: The height is 332px instead of 326px from figma */}
+			{/* !!NOTE: It caused by the additional border 1px of popup-card (2px total top+bottom) */}
+			{/* !!NOTE: And 4px more is caused by automatic page list spacing, see line 47-47 note */}
 			<div className="popup-card">
 				<label className="checkbox-container">
-					{/* NOTE: Since improvisation is not allowed, I didn't create a state when only some pages are selected. Instead, I set to unchecked */}
+					{/* !!NOTE: Since improvisation is not allowed, I didn't create a state when only some pages are selected. Instead, I set to unchecked */}
 					<span className="checkbox-label">All pages</span>
 					<input
 						type="checkbox"
@@ -41,9 +44,9 @@ function App() {
 					/>
 				</label>
 				<div className="divider" />
-				{/* NOTE: Since the figma is set to manual sorting, the space between last checkbox and divider is manual (overlapped) */}
-				{/* NOTE: But here, I set to automatic spacing, so the total height is different than the figma */}
-				{/* NOTE: Actually, it can be done by adding margin top with minus value, I separate it to custom class, mt- */}
+				{/* !!NOTE: Since the figma is set to manual sorting, the space between last checkbox and divider is manual (overlapped) */}
+				{/* !!NOTE: But here, I set to automatic spacing, so the total height is different than the figma */}
+				{/* !!NOTE: Actually, it can be done by adding margin top with minus value, I separate it to custom class, mt- */}
 				{pagesList.map((page, index) => (
 					<label key={index} className="checkbox-container">
 						<span className="checkbox-label">{page}</span>
