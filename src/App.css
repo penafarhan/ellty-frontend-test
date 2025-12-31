@@ -16,7 +16,7 @@
 	flex-direction: column;
 	border: 1px solid #eeeeee;
 	background: #ffffff;
-	box-shadow: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a;
+	box-shadow: 0px 8px 15px 0px #1414141f, 0px 0px 4px 0px #1414141a; /* 12% and 10% opacity */
 }
 
 .checkbox-container {
@@ -43,7 +43,7 @@
 .checkbox-input {
 	width: 23px;
 	height: 23px;
-	border: 1px solid #cdcdcd;
+	border: 1px solid #cdcdcd99; /* 60% opacity */
 	border-radius: 6px;
 	margin: 0 6px;
 	cursor: pointer;
@@ -83,7 +83,7 @@
 .checkbox-input:active {
 	border: 1px solid #bdbdbd;
 	background: #ffffff;
-	box-shadow: 0 0 0 3px #2469f61a;
+	box-shadow: 0 0 0 3px #2469f61a; /* 10% opacity */
 }
 
 .checkbox-input:active::after {
@@ -112,7 +112,7 @@
 .checkbox-input:checked:active {
 	background: #2469f6;
 	border: 1px solid transparent;
-	box-shadow: 0 0 0 3px #2469f61a;
+	box-shadow: 0 0 0 3px #2469f61a; /* 10% opacity */
 }
 
 .divider {
