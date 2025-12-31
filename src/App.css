@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+.body {
+	padding: 20px;
+	font-family: "Montserrat", sans-serif;
+	display: flex;
+	justify-content: center;
+	padding-top: 85px;
+}
+
+.popup-card {
+	width: 370px;
+	/* TODO: check is height = 326px; */
+	border-radius: 6px;
+	padding: 10px 0;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #eeeeee;
+	box-sizing: border-box;
+	background: #ffffff;
+	box-shadow: 0px 8px 15px 0px #1414141f;
+	box-shadow: 0px 0px 4px 0px #1414141a;
+}
+
+.checkbox-container {
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #ffffff;
+	padding: 0px 15px 0px 22px;
+}
+
+.checkbox-label {
+	font-weight: 400;
+	font-style: Regular;
+	font-size: 14px;
+	leading-trim: NONE;
+	line-height: 130%;
+	letter-spacing: 0px;
+	vertical-align: middle;
+	color: #1f2128;
+}
+
+.checkbox-input {
+	width: 23px;
+	height: 23px;
+	border: 1px solid #cdcdcd;
+	border-radius: 6px;
+	margin: 0 6px;
+	cursor: pointer;
+	appearance: none;
+	-webkit-appearance: none;
+	background: #ffffff;
+	position: relative;
+	transition: all 0.2s ease;
+}
+
+/* Checkmark */
+.checkbox-input::after {
+	content: "";
+	position: absolute;
+	display: none;
+	left: 50%;
+	top: 40%;
+	width: 7px;
+	height: 14px;
+	border: solid white;
+	border-width: 0 1px 1px 0;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/* State 2, 8: Hovered unchecked */
+.checkbox-input:hover {
+	border: 1px solid #bdbdbd;
+	background: #ffffff;
+}
+
+.checkbox-input:hover::after {
+	display: block;
+	border-color: #e3e3e3;
+}
+
+/* State 3: Pressing unchecked */
+.checkbox-input:active {
+	border: 1px solid #bdbdbd;
+	background: #ffffff;
+	box-shadow: 0 0 0 3px #2469f61a;
+}
+
+.checkbox-input:active::after {
+	display: block;
+	border-color: #878787;
+}
+
+/* State 5: Checked */
+.checkbox-input:checked {
+	background: #2469f6;
+	border: 1px solid transparent;
+}
+
+.checkbox-input:checked::after {
+	display: block;
+	border-color: white;
+}
+
+/* State 4, 6: Hovered checked */
+.checkbox-input:checked:hover {
+	background: #5087f8;
+	border: 1px solid transparent;
+}
+
+/* State 7: Pressing checked */
+.checkbox-input:checked:active {
+	background: #2469f6;
+	border: 1px solid transparent;
+	box-shadow: 0 0 0 3px #2469f61a;
+}
+
+.divider {
+	margin: 10px 15px;
+	border: 0.7px solid #cdcdcd;
+}
+
+.btn-container {
+	padding: 10px 15px;
+	gap: 10px;
+}
+
+.btn-default {
+	width: 100%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	/* behavior configuration */
+	/* width: 340px; */
+	height: 40px;
+	border-radius: 4px;
+	padding: 10px 20px;
+	gap: 10px;
+	angle: 0 deg;
+	/* text configuration */
+	font-family: Montserrat;
+	font-weight: 400;
+	font-style: Regular;
+	font-size: 14px;
+	leading-trim: NONE;
+	line-height: 130%;
+	letter-spacing: 0px;
+	vertical-align: middle;
+	color: #1f2128;
+	background: #ffce22;
+}
+
+.btn-default:hover {
+	background: #ffd84d;
+}
+
+.btn-default:active {
+	background: #ffce22;
+}
